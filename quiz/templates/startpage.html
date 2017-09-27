@@ -19,17 +19,17 @@
 		<!--nedan vill jag ev göra om till kolumner-->
 
 		{% for quiz in quizzes %}
-			<p> {{ quiz.name }}</p>
+			<p><a href="{% url 'quiz_page' quiz.quiz_number %}" >
+
+			{{ quiz.name }}
+		</a>></p>
 		{% endfor %}
 
-		
-
-
+	
 
 		<br>
 
-		<p> By: Ida Herbertsson </p>
-		<!--denna skulle jag vilja ha centrerad-->
+		
 
-</body>
+	</body>
 </html>
