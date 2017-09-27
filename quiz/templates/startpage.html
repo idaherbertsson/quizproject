@@ -14,24 +14,16 @@
 	<body>
 
 		<h1>Testa dina kunskaper!</h1>	
+		
 
-		<div class="container">
-			<div class ="row">
-				<div class = col-md-4>
-					<h2>
-						<a href = "länk quiz 1">Quiz 1</a>
-					</h2>
-				</div>	
-				<div class = col-md-4>	
-					<h2>Quiz 2</h2>
-				</div>
-				<div class = col-md-4>
-					<h2>Qiuz 3</h2>
-				</div>
-			</div>
-		</div>		
+		<!--nedan vill jag ev göra om till kolumner>
+
+		{% for quiz in quizzes %}
+			<p> {{ quiz.name }}</p>
+		{% endfor %}
 
 		
+
 
 
 		<br>
