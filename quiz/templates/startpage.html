@@ -20,7 +20,7 @@
 
 		{% for quiz in quizzes %}
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}" >
-				{{ quiz.name }}
+				<button type = "submit" >{{ quiz.name }} </button>
 			</a></p>
 		{% empty %}
 			<p><em>Det finns inga frågesporter ännu.</em></p>
