@@ -12,9 +12,8 @@
 	</head>
 
 	<body>
-		<h1> Du är nu klar och fick {{ correct }} av {{ total }}   </h1>
-
-		<p>
+		
+		<h1>
 			{% if percentage_correct >= 0.8 %}
 				Fantastiskt! Du har koll på det här!
 			{% elif percentage_correct < 0.8 and percentage_correct >= 0.5 %}
@@ -22,10 +21,13 @@
 			{% else %}
 				Nja, sådär. Läs på och försök sedan igen!
 			{% endif %}
+		</h1>
+
+		<h2>Du svarade rätt på {{ correct }} av {{ total }} frågor </h2>
 
 
 		<p><a href = "{% url 'start_page' %}">
-			Till startsidan
+			<button type = "submit">Gör fler quiz!</button>
 		</a></p>
 
 
