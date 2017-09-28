@@ -1,6 +1,7 @@
 from django.shortcuts import redirect
 from quiz.models import Quiz
 from django.shortcuts import render
+from django.http import Http404
 
 
 def startpage (request):
@@ -11,6 +12,12 @@ def startpage (request):
 	return render (request, "startpage.html", context)
 
 def quiz(request, quiz_number):
+
+	#try:
+	#	quiz = Quiz.objects.get(quiz_number=quiz_number)
+	#except Quiz.DoesNotExist:
+	#	raise Http404
+
 	context = {
 		"quiz" : Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number" : quiz_number,
@@ -49,6 +56,7 @@ def completed (request, quiz_number):
 	context = {
 		"correct" : num_correct_answers,
 		"total" : num_questions,
+		"percentage_correct" : num_correct_answers/num_questions
 	}
 	return render (request, "completed.html", context)
 

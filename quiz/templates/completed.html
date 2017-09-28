@@ -12,7 +12,17 @@
 	</head>
 
 	<body>
-		<h1> Du är nu klar och fick {{ correct }} av {{ total }} </h1>
+		<h1> Du är nu klar och fick {{ correct }} av {{ total }}   </h1>
+
+		<p>
+			{% if percentage_correct >= 0.8 %}
+				Snyggt jobbat! Du har koll på det här!
+			{% elif percentage_correct < 0.8 and percentage_correct >= 0.5 %}
+				Helt okej resultat! Kan du ännu bättre?
+			{% else %}
+				Nja, sådär. Läs på och försök sedan igen!
+			{% endif %}
+
 
 		<p><a href = "{% url 'start_page' %}">
 			Till startsidan
