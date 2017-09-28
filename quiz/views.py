@@ -13,10 +13,10 @@ def startpage (request):
 
 def quiz(request, quiz_number):
 
-	#try:
-	#	quiz = Quiz.objects.get(quiz_number=quiz_number)
-	#except Quiz.DoesNotExist:
-	#	raise Http404
+	try:
+		quiz = Quiz.objects.get(quiz_number=quiz_number)
+	except Quiz.DoesNotExist:
+		raise Http404
 
 	context = {
 		"quiz" : Quiz.objects.get(quiz_number=quiz_number),
@@ -25,7 +25,13 @@ def quiz(request, quiz_number):
 	return render (request, "quiz.html", context)
 
 def question(request, quiz_number, question_number):
-	quiz = Quiz.objects.get(quiz_number=quiz_number)
+
+	try: 
+		quiz=Quiz.objects.get(quiz_number=quiz_number)
+	except Quiz.DoesNotExist:
+		raise Http404
+
+
 	questions = quiz.questions.all()
 	question = questions[question_number - 1]
 	context = {
@@ -56,7 +62,7 @@ def completed (request, quiz_number):
 	context = {
 		"correct" : num_correct_answers,
 		"total" : num_questions,
-		"percentage_correct" : num_correct_answers/num_questions
+		"percentage_correct" : num_correct_answers/num_questions,
 	}
 	return render (request, "completed.html", context)
 
