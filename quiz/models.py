@@ -1,11 +1,11 @@
 from django.db import models
 
-class Quiz (models.Model)
-	quiz_number = models.PositiveIntegerField
+class Quiz (models.Model):
+	quiz_number = models.PositiveIntegerField()
 	name = models.CharField(max_length = 100)
-	description = models.TextField
+	description = models.TextField()
 
-class Question(models.Model)
+class Question(models.Model):
 	question = models.TextField()
 	answer1 = models.CharField(max_length=100)
 	answer2 = models.CharField(max_length=100)
