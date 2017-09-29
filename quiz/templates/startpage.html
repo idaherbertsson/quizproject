@@ -21,12 +21,28 @@
 				<div class = "col-md-4">
 					<h2>Testa dina kunskaper!</h2>	
 					<br>
-					
+				</div>
+
+				<div class = "col-md-4">
+				</div>
+
+			</div>
+		</div>					
+
+		<div class="container">
+			<div class="row">
+				<div class = "col-md-4">
+				</div>
+
+
+
 						{% for quiz in quizzes %}
 					<h4><a href="{% url 'quiz_page' quiz.quiz_number %}" >
 						{{ quiz.name }} 
-						<br>
-						<br>
+					<br>
+					<img src="/static/images/Quiz.{{ quiz.quiz_number}}.jpg" height="30%" width="30%">
+
+					<br>
 					</a></h4>
 						{% empty %}
 					<p><em>Det finns inga frågesporter ännu.</em></p>
