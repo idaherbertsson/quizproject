@@ -24,22 +24,24 @@
 					<h3> {{ question_number }}. {{ question }} </h3>
 
 
-					<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+					<center><form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 
 						{% csrf_token %}
 						<br>
 
 						<input type="radio" name="answer" value="1"> {{ answer1 }}
 						<br>
+
 						<input type="radio" name="answer" value="2"> {{ answer2 }}
 						<br>
 						<input type="radio" name="answer" value="3"> {{ answer3 }}
+						<br>
 
 						<h6><a href = "{% url 'completed_page' quiz_number %}">
 						<br>
 						<button type = "submit"> Nästa </button>
 						</a></h6>
-					</form>
+					</form></center>
 				</div>
 				<div class = "col-md-4">
 				</div>

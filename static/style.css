@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-    text-align: left;
+    text-align: center;
     color: rgb(180, 180, 180);
 }
 
@@ -29,7 +29,7 @@ h5 {
 }
 
 h6 {
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -43,7 +43,7 @@ form{
     margin-left: auto;
     margin-right: auto;
 	text-align: left;
-	 color: rgb(150, 150, 150);
+	color: rgb(150, 150, 150);
 }
 
 
