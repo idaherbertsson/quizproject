@@ -1,23 +1,27 @@
 body {
-	background: MidnightBlue;
-	font-family: Helvetica;
+	background: rgb(0,0,50);
+	font-family: Georgia;
 	
 }
 
 h1 {
     text-align: center;
+    color: rgb(180, 180, 180)
 }
 
 h2 {
     text-align: center;
+    color: rgb(180, 180, 180);
 }
 
 h3 {
     text-align: left;
+    color: rgb(180, 180, 180);
 }
 
 h4 {
     text-align: center;
+    color: rgb(150, 150, 150)
 }
 
 h5 {
@@ -39,6 +43,7 @@ form{
     margin-left: auto;
     margin-right: auto;
 	text-align: left;
+	 color: rgb(150, 150, 150);
 }
 
 
