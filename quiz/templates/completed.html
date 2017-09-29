@@ -13,21 +13,24 @@
 
 	<body>
 		
-		<h1>
+		<h2>
 			{% if percentage_correct >= 0.8 %}
 				Fantastiskt! Du har koll på det här!
+				<br>
 			{% elif percentage_correct < 0.8 and percentage_correct >= 0.5 %}
 				Bra jobbat! Kan du ännu bättre?
+				<br>
+			
 			{% else %}
 				Nja, sådär. Läs på och försök sedan igen!
 			{% endif %}
-		</h1>
+		</h2>
 
-		<h2>Du svarade rätt på {{ correct }} av {{ total }} frågor </h2>
+		<h4>Du svarade rätt på {{ correct }} av {{ total }} frågor </h4>
 
 
 		<p><a href = "{% url 'start_page' %}">
-			<button type = "submit">Gör fler quiz!</button>
+			<button type = "submit">Testa fler quiz!</button>
 		</a></p>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

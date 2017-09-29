@@ -1,7 +1,41 @@
 body {
-	background: orchid;
+	background: LightSteelBlue;
 	font-family: Helvetica;
 	
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+}
+
+h4 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+h6 {
+    text-align: left;
+}
+
+
+
+p {
+	text-align: center;
+}
+
+form{
+	text-align: left;
 }
 
 

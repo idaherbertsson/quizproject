@@ -19,13 +19,17 @@
 				</div>
 
 				<div class="col-md-4">
+					<br>
 					<h1>{{ quiz.name }} </h1>
+					
 
-					<p>{{ quiz.description }} </p>
+					<h4>{{ quiz.description }} </h4>
 
-					<p> <a href = "{% url 'question_page' quiz_number 1 %}">
+					<br>
+
+					<h5> <a href = "{% url 'question_page' quiz_number 1 %}">
 					<button type = "submit"> Starta </button>
-					</a></p>
+					</a></h5>
 				</div>	
 
 				<div class = "col-md-4">
