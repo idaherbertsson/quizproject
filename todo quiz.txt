@@ -1,0 +1,6 @@
+lägg till att alternativ är iklickat
+byt knappar
+flytta ner texter eller lägg in i typ en box så det hamnar längrener
+Lägg till footer
+Lägg till en fyrkant som frågorna kommer i som ligger i vänstra kolumnen. rundade hörn. ljusblå
+Gör knapp till samma format
