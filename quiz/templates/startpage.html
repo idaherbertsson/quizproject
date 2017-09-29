@@ -15,12 +15,11 @@
 
 		<h1>Testa dina kunskaper!</h1>	
 
-
 		<!--nedan vill jag ev göra om till kolumner-->
 
 		{% for quiz in quizzes %}
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}" >
-				<button type = "submit" >{{ quiz.name }} </button>
+				{{ quiz.name }} 
 			</a></p>
 		{% empty %}
 			<p><em>Det finns inga frågesporter ännu.</em></p>
